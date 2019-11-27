@@ -42,7 +42,8 @@ def main():
         p2 = subprocess.Popen(cmd2, stdin=p1.stdout, stdout=subprocess.PIPE)
         site_pi = p2.stdout.readlines()
         uncallable_sites, callable_sites = get_uncallable_sites(chrom, start, stop)
-        print chrom, start, stop, parse_site_pi(site_pi)/((stop-start)-uncallable_sites), callable_sites
+        if callable_sites > 0:
+            print chrom, start, stop, parse_site_pi(site_pi)/((stop-start)-uncallable_sites), callable_sites
         #break
 
 
