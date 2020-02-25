@@ -1,3 +1,4 @@
+#Here, chl_content is set to the visual score
 vs_scores<-vector()
 pred_tile_list=list()
 #Intital plot (just to get axes)
